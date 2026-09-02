@@ -234,7 +234,10 @@ html[data-theme="dark"] .icon-btn .i-moon { display: none; }
   background: var(--bg-elev);
 }
 
-/* Photo placeholders — swap the <div class="ph"> for an <img> with the same classes */
+/* Photos. Any <img data-ph="..."> whose file is missing is swapped for one of
+   these placeholders by script.js; the gradient below covers the moment before. */
+img[data-ph] { background: linear-gradient(135deg, var(--ph-a), var(--ph-b)); }
+
 .ph {
   position: relative;
   display: grid;
