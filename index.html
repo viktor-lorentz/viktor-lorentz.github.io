@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- EDIT ▸ Page metadata -->
+  <title>Viktor Lorentz — Developer</title>
+  <meta name="description" content="Viktor Lorentz is a developer who builds games and apps people come back to — shipped on Roblox, Android and the web.">
+  <meta name="author" content="Viktor Lorentz">
+  <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c0c0c" media="(prefers-color-scheme: dark)">
+
+  <!-- Social preview card. Once live, make og:image an absolute URL (e.g. https://yourdomain.com/assets/og.jpg, 1200×630). -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Viktor Lorentz — Developer">
+  <meta property="og:description" content="Games and apps people come back to. Roblox, Android, web.">
+  <meta property="og:image" content="assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141413'/%3E%3Ctext x='32' y='43' font-family='Inter,Helvetica,Arial,sans-serif' font-size='30' font-weight='600' fill='%23ffffff' text-anchor='middle'%3EVL%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Apply the saved theme before first paint so there is no flash -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <!-- Structured data so search engines show your name and profiles correctly -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Viktor Lorentz",
+    "jobTitle": "Software Developer",
+    "url": "https://yourdomain.com",
+    "sameAs": [
+      "https://github.com/yourhandle",
+      "https://gitlab.com/viktorcode2",
+      "https://www.linkedin.com/in/yourhandle",
+      "https://x.com/yourhandle"
+    ]
+  }
+  </script>
+</head>
+
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============================== NAV ============================== -->
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Viktor Lorentz — back to top">
+        <span class="brand-full">Viktor Lorentz</span>
+        <span class="brand-mono" aria-hidden="true">VL</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark mode">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <!-- EDIT ▸ Availability line. Delete this <p> if you're not looking. -->
+          <p class="status reveal"><span class="dot" aria-hidden="true"></span>Open to new opportunities</p>
+
+          <h1 id="hero-title" class="reveal">Viktor Lorentz</h1>
+
+          <p class="lede reveal">I build <em>games</em> and <em>apps</em> that people come back to.</p>
+
+          <!-- EDIT ▸ Two-sentence intro -->
+          <p class="intro reveal">Software developer based in [City]. I've shipped multiplayer games on Roblox and a native Android app, taking each from first sketch to live product: gameplay, interface, monetisation and analytics.</p>
+
+          <div class="cta reveal">
+            <!-- EDIT ▸ Drop your résumé at assets/resume.pdf -->
+            <a class="btn btn-primary" href="assets/resume.pdf" target="_blank" rel="noopener">
+              Résumé
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>
+            </a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+
+          <!-- EDIT ▸ Social links (also update the full list in the Contact section) -->
+          <ul class="socials reveal" aria-label="Social links">
+            <li><a href="https://github.com/yourhandle" target="_blank" rel="noopener">GitHub<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+            <li><a href="https://gitlab.com/viktorcode2" target="_blank" rel="noopener">GitLab<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+            <li><a href="https://x.com/yourhandle" target="_blank" rel="noopener">X<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+            <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener">Instagram<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+          </ul>
+        </div>
+
+        <figure class="hero-media reveal">
+          <!-- EDIT ▸ Replace the <div> below with:
+               <img class="portrait" src="assets/portrait.jpg" alt="Viktor Lorentz" width="800" height="1000"> -->
+          <div class="ph portrait" role="img" aria-label="Portrait photo placeholder">
+            <span class="ph-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+              <span>Portrait · 4:5</span>
+            </span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container section-grid">
+        <p class="section-label reveal"><span>01</span>About</p>
+        <div class="section-body">
+          <h2 id="about-title" class="reveal">A developer who likes to <em>ship</em>.</h2>
+
+          <!-- EDIT ▸ Your story in two short paragraphs -->
+          <div class="prose reveal">
+            <p>Over the past few years I've designed, built and launched products end-to-end: two multiplayer games on Roblox with live monetisation and live-ops, and Terra, a travel tracker for Android written in Kotlin and Jetpack Compose. I'm comfortable owning the whole thing, from the first prototype to the dashboards that tell me whether it's working.</p>
+            <p>I care about the details that make software feel good: fast, clear interfaces and code that stays easy to change. Outside of work you'll usually find me [your hobby here].</p>
+          </div>
+
+          <dl class="facts reveal">
+            <div><dt>Based in</dt><dd>[City, Country]</dd></div>
+            <div><dt>Focus</dt><dd>Games · Mobile · Web</dd></div>
+            <div><dt>Currently</dt><dd>Open to full-time &amp; freelance</dd></div>
+          </dl>
+
+          <!-- Optional photo strip. Delete this <ul> if you'd rather not have it.
+               Swap each <div class="ph"> for: <img src="assets/photo-1.jpg" alt="" width="800" height="800"> -->
+          <ul class="gallery reveal" aria-label="Photos">
+            <li><div class="ph" role="img" aria-label="Photo placeholder"><span class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><span>Photo · 1:1</span></span></div></li>
+            <li><div class="ph" role="img" aria-label="Photo placeholder"><span class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><span>Photo · 1:1</span></span></div></li>
+            <li><div class="ph" role="img" aria-label="Photo placeholder"><span class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><span>Photo · 1:1</span></span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== EXPERIENCE ============================== -->
+    <section id="work" class="section" aria-labelledby="work-title">
+      <div class="container section-grid">
+        <p class="section-label reveal"><span>02</span>Experience</p>
+        <div class="section-body">
+          <h2 id="work-title" class="reveal">Where I've <em>worked</em>.</h2>
+
+          <!-- EDIT ▸ One <li> per role, newest first. Lead with results and numbers where you can. -->
+          <ol class="xp">
+            <li class="xp-item reveal">
+              <p class="xp-when">2023 — Present</p>
+              <div>
+                <h3 class="xp-role">Independent Developer</h3>
+                <p class="xp-org">Self-employed</p>
+                <p class="xp-desc">Design, build and launch games and apps end-to-end: Room Check and World Cup Obby on Roblox, Terra on Android. Own everything from gameplay and UI to monetisation, analytics and live-ops events.</p>
+                <ul class="tags"><li>Luau</li><li>Kotlin</li><li>Product</li><li>Live-ops</li></ul>
+              </div>
+            </li>
+            <li class="xp-item reveal">
+              <p class="xp-when">2021 — 2023</p>
+              <div>
+                <h3 class="xp-role">[Job title]</h3>
+                <p class="xp-org">[Company]</p>
+                <p class="xp-desc">One or two sentences on what you owned and the impact it had. Something like: "Led the rebuild of the checkout flow, cutting drop-off by 18% and shipping two weeks ahead of schedule."</p>
+                <ul class="tags"><li>[Skill]</li><li>[Skill]</li><li>[Skill]</li></ul>
+              </div>
+            </li>
+            <li class="xp-item reveal">
+              <p class="xp-when">2019 — 2021</p>
+              <div>
+                <h3 class="xp-role">[Job title]</h3>
+                <p class="xp-org">[Company]</p>
+                <p class="xp-desc">What you did, who it was for, and why it mattered. Keep it to the parts an employer would ask you about in an interview.</p>
+                <ul class="tags"><li>[Skill]</li><li>[Skill]</li></ul>
+              </div>
+            </li>
+          </ol>
+
+          <h3 class="subhead reveal">Education</h3>
+          <ol class="xp">
+            <li class="xp-item reveal">
+              <p class="xp-when">2015 — 2019</p>
+              <div>
+                <h3 class="xp-role">[Degree], [Field of study]</h3>
+                <p class="xp-org">[University]</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container section-grid">
+        <p class="section-label reveal"><span>03</span>Projects</p>
+        <div class="section-body">
+          <h2 id="projects-title" class="reveal">Selected <em>work</em>.</h2>
+
+          <!-- EDIT ▸ Each card links out. Swap the <div class="ph"> inside .card-media for:
+               <img src="assets/project-name.jpg" alt="" width="1600" height="1000"> -->
+          <ul class="projects">
+            <li class="reveal">
+              <a class="card" href="https://www.roblox.com/games/" target="_blank" rel="noopener">
+                <div class="card-media">
+                  <div class="ph"><span class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><span>Cover · 16:10</span></span></div>
+                </div>
+                <div class="card-title"><span>Room Check</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></div>
+                <p class="card-desc">A fast-paced multiplayer game on Roblox with a full growth kit: onboarding, invite and group rewards, live-ops events, redeem codes and analytics.</p>
+                <ul class="tags"><li>Luau</li><li>Roblox</li><li>Live-ops</li><li>Monetisation</li></ul>
+              </a>
+            </li>
+
+            <li class="reveal">
+              <a class="card" href="https://www.roblox.com/games/" target="_blank" rel="noopener">
+                <div class="card-media">
+                  <div class="ph"><span class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><span>Cover · 16:10</span></span></div>
+                </div>
+                <div class="card-title"><span>World Cup Obby</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></div>
+                <p class="card-desc">A 2026 World Cup themed obstacle course on Roblox. Level design, checkpoints, cosmetics and in-experience purchases, built for the tournament window.</p>
+                <ul class="tags"><li>Luau</li><li>Roblox</li><li>Level design</li></ul>
+              </a>
+            </li>
+
+            <li class="reveal">
+              <a class="card" href="https://gitlab.com/viktorcode2/terra" target="_blank" rel="noopener">
+                <div class="card-media">
+                  <div class="ph"><span class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><span>Cover · 16:10</span></span></div>
+                </div>
+                <div class="card-title"><span>Terra</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></div>
+                <p class="card-desc">A travel tracker for Android that maps every place you've been. Native Kotlin with Jetpack Compose, offline-first, designed to feel at home on the platform.</p>
+                <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Android</li></ul>
+              </a>
+            </li>
+
+            <li class="reveal">
+              <a class="card" href="#" rel="noopener">
+                <div class="card-media">
+                  <div class="ph"><span class="ph-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg><span>Cover · 16:10</span></span></div>
+                </div>
+                <div class="card-title"><span>[Next project]</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></div>
+                <p class="card-desc">One sentence on what it is, one on what you built or learned. Duplicate this card for more, or delete it.</p>
+                <ul class="tags"><li>[Tech]</li><li>[Tech]</li></ul>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SKILLS ============================== -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container section-grid">
+        <p class="section-label reveal"><span>04</span>Skills</p>
+        <div class="section-body">
+          <h2 id="skills-title" class="reveal">What I work <em>with</em>.</h2>
+
+          <!-- EDIT ▸ Keep each list to five or six items -->
+          <div class="skills reveal">
+            <div>
+              <h3>Languages</h3>
+              <ul><li>Luau</li><li>Kotlin</li><li>JavaScript / TypeScript</li><li>HTML &amp; CSS</li><li>Python</li></ul>
+            </div>
+            <div>
+              <h3>Tools</h3>
+              <ul><li>Roblox Studio</li><li>Android Studio &amp; Jetpack Compose</li><li>Git &amp; GitLab CI</li><li>Figma</li><li>[Add yours]</li></ul>
+            </div>
+            <div>
+              <h3>Strengths</h3>
+              <ul><li>Product thinking</li><li>Live-ops &amp; analytics</li><li>UI / UX polish</li><li>Rapid prototyping</li><li>Shipping on a deadline</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container section-grid">
+        <p class="section-label reveal"><span>05</span>Contact</p>
+        <div class="section-body">
+          <h2 id="contact-title" class="reveal">Let's work <em>together</em>.</h2>
+          <p class="prose reveal">Whether it's a full-time role, a freelance project or a question about something I've built, my inbox is open. I reply to everything.</p>
+
+          <!-- EDIT ▸ Your email (three places on this page: here, the button, and data-copy) -->
+          <div class="cta reveal">
+            <a class="btn btn-primary" href="mailto:your@email.com">your@email.com</a>
+            <button class="btn" type="button" data-copy="your@email.com">
+              <svg class="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              <svg class="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+              <span>Copy email</span>
+            </button>
+          </div>
+
+          <!-- EDIT ▸ Full list of links -->
+          <ul class="links reveal">
+            <li><a href="https://github.com/yourhandle" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">github.com/yourhandle</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+            <li><a href="https://gitlab.com/viktorcode2" target="_blank" rel="noopener"><span class="k">GitLab</span><span class="v">gitlab.com/viktorcode2</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/yourhandle" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">linkedin.com/in/yourhandle</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+            <li><a href="https://x.com/yourhandle" target="_blank" rel="noopener"><span class="k">X</span><span class="v">@yourhandle</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+            <li><a href="https://instagram.com/yourhandle" target="_blank" rel="noopener"><span class="k">Instagram</span><span class="v">@yourhandle</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+            <li><a href="assets/resume.pdf" target="_blank" rel="noopener"><span class="k">Résumé</span><span class="v">Download PDF</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span data-year>2026</span> Viktor Lorentz</p>
+      <p>Designed &amp; built by hand. No frameworks.</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
