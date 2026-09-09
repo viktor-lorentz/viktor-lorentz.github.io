@@ -13,8 +13,6 @@
   --fg-3: #9a9a95;
   --line: #e8e8e4;
   --line-2: #d2d2cd;
-  --ph-a: #f1f1ee;
-  --ph-b: #e4e4df;
   --ok: #16a34a;
   --focus: #2563eb;
 
@@ -38,8 +36,6 @@ html[data-theme="dark"] {
   --fg-3: #6e6e6a;
   --line: #232322;
   --line-2: #363634;
-  --ph-a: #171716;
-  --ph-b: #202020;
   --ok: #22c55e;
   --focus: #60a5fa;
 }
@@ -55,8 +51,6 @@ html[data-theme="dark"] {
     --fg-3: #6e6e6a;
     --line: #232322;
     --line-2: #363634;
-    --ph-a: #171716;
-    --ph-b: #202020;
     --ok: #22c55e;
     --focus: #60a5fa;
   }
@@ -235,44 +229,6 @@ html[data-theme="dark"] .icon-btn .i-moon { display: none; }
   background: var(--bg-elev);
 }
 
-/* Photos. Any <img data-ph="..."> whose file is missing is swapped for one of
-   these placeholders by script.js; the gradient below covers the moment before. */
-img[data-ph] { background: linear-gradient(135deg, var(--ph-a), var(--ph-b)); }
-
-.ph {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, var(--ph-a), var(--ph-b));
-  border: 1px solid var(--line);
-  color: var(--fg-3);
-  overflow: hidden;
-}
-.ph::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(var(--line-2) 1px, transparent 1.5px);
-  background-size: 16px 16px;
-  opacity: .6;
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 20%, transparent 78%);
-  mask-image: radial-gradient(ellipse at center, #000 20%, transparent 78%);
-}
-.ph-label {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  font-size: .6875rem;
-  font-weight: 500;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-}
-.ph-label svg { width: 22px; height: 22px; opacity: .8; }
-
 .portrait {
   aspect-ratio: 4 / 5;
   width: 100%;
@@ -434,14 +390,6 @@ h1 {
   margin-bottom: 6px;
 }
 .facts dd { font-weight: 500; }
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 40px;
-}
-.gallery .ph, .gallery img { aspect-ratio: 1; border-radius: var(--r-md); object-fit: cover; }
 
 @media (max-width: 560px) {
   .facts { grid-template-columns: 1fr; gap: 16px; }
@@ -618,7 +566,7 @@ a.card:hover .card-title .arrow { transform: translate(2px, -2px); color: var(--
 
 /* ---------- Print ---------- */
 @media print {
-  .nav, .skip, .cta, .footer a, .icon-btn, .gallery { display: none !important; }
+  .nav, .skip, .cta, .footer a, .icon-btn { display: none !important; }
   .js .reveal { opacity: 1 !important; transform: none !important; }
   body { font-size: 11pt; }
   .section { padding-block: 28px; break-inside: avoid; }
