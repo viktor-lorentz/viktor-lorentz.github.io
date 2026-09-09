@@ -10,12 +10,18 @@
   <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0c0c0c" media="(prefers-color-scheme: dark)">
 
-  <!-- Social preview. Once live, make og:image an absolute URL (e.g. https://viktor-lorentz.github.io/assets/og.jpg, 1200×630). -->
+  <link rel="canonical" href="https://viktor-lorentz.github.io/">
+
+  <!-- Social preview card (assets/og.jpg, 1200×630) -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://viktor-lorentz.github.io/">
   <meta property="og:title" content="Viktor Lorentz — Electrical &amp; Computer Engineering">
   <meta property="og:description" content="ECE student at USC Viterbi. Hardware, embedded systems and software that ships.">
-  <meta property="og:image" content="assets/og.jpg">
+  <meta property="og:image" content="https://viktor-lorentz.github.io/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://viktor-lorentz.github.io/assets/og.jpg">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141413'/%3E%3Ctext x='32' y='43' font-family='Inter,Helvetica,Arial,sans-serif' font-size='30' font-weight='600' fill='%23ffffff' text-anchor='middle'%3EVL%3C/text%3E%3C/svg%3E">
 
@@ -40,6 +46,8 @@
     "@type": "Person",
     "name": "Viktor Lorentz",
     "jobTitle": "Electrical and Computer Engineering Student",
+    "url": "https://viktor-lorentz.github.io/",
+    "image": "https://viktor-lorentz.github.io/assets/portrait.jpg",
     "email": "mailto:viktor.lorentz@gmail.com",
     "alumniOf": "University of Southern California, Viterbi School of Engineering",
     "address": { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA" },
@@ -137,12 +145,6 @@
             <div><dt>Currently</dt><dd>Open to internships &amp; research</dd></div>
           </dl>
 
-          <!-- PHOTOS ▸ Optional strip. Drop assets/photo-1.jpg, photo-2.jpg, photo-3.jpg — or delete this <ul>. -->
-          <ul class="gallery reveal" aria-label="Photos">
-            <li><img src="assets/photo-1.jpg" alt="" width="800" height="800" data-ph="Photo · 1:1"></li>
-            <li><img src="assets/photo-2.jpg" alt="" width="800" height="800" data-ph="Photo · 1:1"></li>
-            <li><img src="assets/photo-3.jpg" alt="" width="800" height="800" data-ph="Photo · 1:1"></li>
-          </ul>
         </div>
       </div>
     </section>
@@ -156,27 +158,23 @@
 
           <ul class="projects">
             <li class="reveal">
-              <!-- EDIT ▸ Swap in your Google Play listing URL -->
-              <a class="card" href="https://play.google.com/store/apps/" target="_blank" rel="noopener">
-                <div class="card-media">
-                  <img src="assets/project-terra.jpg" alt="" width="1600" height="1000" data-ph="Cover · 16:10">
-                </div>
+              <a class="card" href="https://play.google.com/store/apps/details?id=com.terra.app" target="_blank" rel="noopener">
+                <p class="card-meta">2026 · Android · Google Play</p>
                 <div class="card-title"><span>Terra</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></div>
-                <p class="card-desc">A native Android travel-history tracker. Logs coordinate and timestamp data on-device, then reconstructs it into an animated playback of everywhere you've been — with a rendering pipeline that composites the route into an exportable MP4. Published to the Google Play Store.</p>
-                <ul class="tags"><li>Kotlin</li><li>Android SDK</li><li>Jetpack Compose</li><li>Local persistence</li></ul>
+                <p class="card-desc">A native Android travel-history tracker. It logs coordinate and timestamp data on-device, then reconstructs it into an animated playback of everywhere you've been — with a rendering pipeline that composites the route into an exportable MP4. Built in Kotlin with Jetpack Compose and published to the Google Play Store.</p>
+                <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Android SDK</li><li>On-device rendering</li></ul>
               </a>
             </li>
 
             <li class="reveal">
-              <!-- EDIT ▸ Swap in your Roblox experience URL -->
-              <a class="card" href="https://www.roblox.com/games/" target="_blank" rel="noopener">
-                <div class="card-media">
-                  <img src="assets/project-room-check.jpg" alt="" width="1600" height="1000" data-ph="Cover · 16:10">
-                </div>
-                <div class="card-title"><span>Room Check</span><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg></div>
-                <p class="card-desc">A multiplayer game built and shipped to Roblox: gameplay logic, state synchronisation across clients and an in-game economy, all in Lua. I also wired up a Model Context Protocol toolchain connecting an external AI client to Roblox Studio to automate repetitive scripting and asset edits.</p>
+              <!-- EDIT ▸ Got the Roblox link? Change this <div> to
+                   <a class="card" href="YOUR_URL" target="_blank" rel="noopener"> and close with </a>. -->
+              <div class="card card-static">
+                <p class="card-meta">2025 — 2026 · Roblox</p>
+                <div class="card-title"><span>Room Check</span></div>
+                <p class="card-desc">A round-based multiplayer building game. Every player gets a room plot and a build budget, decorates it from a 113-item catalogue with grid-snapped placement, then the whole server tours each room and rates it one to five stars. I wrote the server-authoritative round loop, the placement system, DataStore persistence and the in-game economy in Lua.</p>
                 <ul class="tags"><li>Lua</li><li>Roblox Studio</li><li>Multiplayer</li><li>MCP</li></ul>
-              </a>
+              </div>
             </li>
           </ul>
         </div>
