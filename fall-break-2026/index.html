@@ -1,0 +1,711 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fall Break 2026</title>
+<meta name="description" content="Three nights camping under Mt. Whitney in the Alabama Hills, ending in a sunset soak at Wild Willy's Hot Springs. Oct 7–10, 2026.">
+<meta property="og:title" content="Fall Break 2026 — Eastern Sierra">
+<meta property="og:description" content="3 nights under Mt. Whitney, ending in a sunset soak at Wild Willy's. Oct 7–10. ~$190/person. You in?">
+<meta property="og:image" content="https://viktor-lorentz.github.io/fall-break-2026/images/hero-whitney.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#e9ecef; --surface:#ffffff; --surface-2:#f3f5f7; --surface-3:#eaeef1;
+    --ink:#161d25; --ink-2:#4c5964; --ink-3:#7c8894;
+    --line:#d6dce1; --line-2:#e6eaee;
+    --teal:#0d8677; --teal-deep:#0a6357; --teal-soft:#d5efea;
+    --sun:#dd8a2a; --alpen:#d1512f; --star:#c99320;
+    --warn:#b26a12; --warn-bg:#fbefd9; --warn-line:#eccf95;
+    --shadow:0 1px 2px rgba(20,30,40,.05), 0 8px 24px -12px rgba(20,30,40,.18);
+    --shadow-lg:0 2px 6px rgba(20,30,40,.06), 0 26px 50px -22px rgba(20,30,40,.32);
+    --maxw:1080px;
+    --sans:"IBM Plex Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --disp:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+    color-scheme:light dark;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1319; --surface:#171c24; --surface-2:#1e242e; --surface-3:#252c37;
+      --ink:#eef2f6; --ink-2:#a6b4c0; --ink-3:#74838f;
+      --line:#2a323d; --line-2:#232a33;
+      --teal:#2cbaa7; --teal-deep:#22a595; --teal-soft:#123029;
+      --sun:#eba13a; --alpen:#ef6f4c; --star:#f2c352;
+      --warn:#e7ac52; --warn-bg:#2a2216; --warn-line:#4a3c22;
+      --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.6);
+      --shadow-lg:0 2px 8px rgba(0,0,0,.45), 0 30px 60px -26px rgba(0,0,0,.75);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1319; --surface:#171c24; --surface-2:#1e242e; --surface-3:#252c37;
+    --ink:#eef2f6; --ink-2:#a6b4c0; --ink-3:#74838f;
+    --line:#2a323d; --line-2:#232a33;
+    --teal:#2cbaa7; --teal-deep:#22a595; --teal-soft:#123029;
+    --sun:#eba13a; --alpen:#ef6f4c; --star:#f2c352;
+    --warn:#e7ac52; --warn-bg:#2a2216; --warn-line:#4a3c22;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -14px rgba(0,0,0,.6);
+    --shadow-lg:0 2px 8px rgba(0,0,0,.45), 0 30px 60px -26px rgba(0,0,0,.75);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-padding-top:64px}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:20px}
+  h1,h2,h3,h4{font-family:var(--disp);font-weight:700;line-height:1.08;text-wrap:balance;margin:0}
+  p{margin:0}
+  a{color:var(--teal-deep);text-underline-offset:3px;text-decoration-thickness:1px}
+  :root[data-theme="dark"] a{color:var(--teal)}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) a{color:var(--teal)}}
+  .mono{font-family:var(--mono)}
+  .tnum{font-variant-numeric:tabular-nums}
+  .eyebrow{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--ink-3)}
+
+  /* ---------- top bar ---------- */
+  .topbar{position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb,var(--bg) 84%,transparent);
+    backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-2)}
+  .topbar .row{display:flex;align-items:center;gap:16px;justify-content:space-between;
+    padding-block:11px}
+  .brand{display:flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:800;
+    font-size:15px;letter-spacing:-.01em;background:none;border:0;color:var(--ink);cursor:pointer}
+  .brand svg{width:20px;height:20px;flex:none;color:var(--teal)}
+  .navlinks{display:flex;gap:20px;align-items:center}
+  .navlinks a{color:var(--ink-2);text-decoration:none;font-size:13.5px;font-weight:500}
+  .navlinks a:hover{color:var(--ink)}
+  .ttoggle{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:9px;
+    border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer}
+  .ttoggle:hover{color:var(--ink);border-color:var(--ink-3)}
+  .ttoggle svg{width:17px;height:17px}
+  @media(max-width:720px){.navlinks{display:none}}
+
+  /* ---------- hero (photo) ---------- */
+  .hero{position:relative;isolation:isolate;background:#0c0e16;border-bottom:1px solid var(--line-2)}
+  .hero-photo{position:absolute;inset:0;z-index:0;
+    background-image:linear-gradient(172deg, rgba(10,12,20,.22), rgba(10,12,20,.5) 52%, rgba(8,10,16,.9)),
+      url('images/hero-whitney.jpg');
+    background-size:cover;background-position:center 44%}
+  .hero-inner{position:relative;z-index:1;max-width:var(--maxw);margin:0 auto;
+    padding:120px 20px 56px;min-height:540px;display:flex;flex-direction:column;justify-content:flex-end}
+  .hero .kicker{color:#f4d9a0;letter-spacing:.2em}
+  .hero h1{color:#fff;font-size:clamp(40px,8.6vw,84px);font-weight:800;letter-spacing:-.02em;
+    margin:14px 0 0;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+  .hero h1 em{font-style:normal;color:#f2b45f}
+  .hero .lede{color:#eef2f6;max-width:34ch;font-size:clamp(16px,2.4vw,20px);margin-top:18px;
+    text-shadow:0 1px 16px rgba(0,0,0,.6)}
+  .hero .crew{margin-top:22px;font-family:var(--mono);font-size:13px;color:#d3dce2;
+    display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+  .hero .crew b{color:#fff;font-weight:600}
+  .hechips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+  .hechip{background:rgba(14,18,24,.5);border:1px solid rgba(255,255,255,.18);
+    backdrop-filter:blur(4px);color:#fff;border-radius:12px;padding:11px 15px;min-width:118px}
+  .hechip .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+    color:#cbd5db}
+  .hechip .v{font-family:var(--disp);font-weight:700;font-size:20px;margin-top:3px;line-height:1}
+  .hechip .v small{font-size:12px;font-weight:500;color:#dae1e6;font-family:var(--mono)}
+
+  /* ---------- sections ---------- */
+  section{padding-block:clamp(46px,7vw,78px)}
+  .sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:30px;max-width:62ch}
+  .sec-head h2{font-size:clamp(26px,4.4vw,40px);letter-spacing:-.02em}
+  .sec-head p{color:var(--ink-2);font-size:16.5px}
+  .divide{height:1px;background:var(--line-2);max-width:var(--maxw);margin:0 auto}
+
+  /* pitch cards */
+  .pitch{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px}
+  .pcard{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;
+    box-shadow:var(--shadow)}
+  .pcard .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
+    background:var(--teal-soft);color:var(--teal-deep);margin-bottom:13px}
+  :root[data-theme="dark"] .pcard .ic{color:var(--teal)}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .pcard .ic{color:var(--teal)}}
+  .pcard .ic svg{width:19px;height:19px}
+  .pcard h3{font-size:17.5px;margin-bottom:6px}
+  .pcard p{color:var(--ink-2);font-size:14.5px}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .shot{position:relative;margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:var(--shadow);background:var(--surface-2);aspect-ratio:4/3}
+  .shot.wide{grid-column:1/-1;aspect-ratio:24/9}
+  .shot img{width:100%;height:100%;object-fit:cover}
+  .shot figcaption{position:absolute;left:0;right:0;bottom:0;padding:30px 14px 12px;color:#fff;
+    font-size:13.5px;font-weight:600;background:linear-gradient(transparent, rgba(8,10,16,.85))}
+  .shot figcaption small{display:block;font-weight:400;font-family:var(--mono);font-size:10.5px;
+    color:#d3dce2;margin-top:3px;letter-spacing:.02em}
+  @media(max-width:520px){.shot{aspect-ratio:3/2}.shot.wide{aspect-ratio:16/9}}
+
+  /* quick facts */
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 17px;
+    box-shadow:var(--shadow)}
+  .fact .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--ink-3)}
+  .fact .v{font-family:var(--disp);font-weight:700;font-size:19px;margin-top:5px;line-height:1.15}
+  .fact .s{font-size:12.5px;color:var(--ink-2);margin-top:3px}
+
+  /* itinerary */
+  .days{display:flex;flex-direction:column;gap:16px}
+  .day{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+    box-shadow:var(--shadow)}
+  .day-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;padding:18px 20px 14px;
+    border-bottom:1px solid var(--line-2)}
+  .day-badge{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.08em;
+    text-transform:uppercase;color:#fff;background:var(--teal-deep);padding:5px 10px;border-radius:8px}
+  :root[data-theme="dark"] .day-badge{background:var(--teal-deep);color:#04140f}
+  .day-top h3{font-size:21px;letter-spacing:-.01em}
+  .day-top .date{font-family:var(--mono);font-size:13px;color:var(--ink-3)}
+  .day-top .tag{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--ink-2);
+    border:1px solid var(--line);border-radius:999px;padding:3px 11px;white-space:nowrap}
+  .rows{padding:8px 20px 18px}
+  .trow{display:grid;grid-template-columns:78px 1fr;gap:14px;padding:9px 0;
+    border-bottom:1px dashed var(--line-2)}
+  .trow:last-child{border-bottom:0}
+  .trow .t{font-family:var(--mono);font-size:12.5px;color:var(--teal-deep);font-weight:500;padding-top:1px}
+  :root[data-theme="dark"] .trow .t{color:var(--teal)}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .trow .t{color:var(--teal)}}
+  .trow .d{font-size:14.5px;color:var(--ink)}
+  .trow .d b{font-weight:600}
+  .trow .d span{color:var(--ink-2)}
+  @media(max-width:520px){.trow{grid-template-columns:64px 1fr;gap:11px}}
+
+  /* hot spring feature */
+  .spring{display:grid;grid-template-columns:1.05fr .95fr;gap:0;border:1px solid var(--line);
+    border-radius:20px;overflow:hidden;box-shadow:var(--shadow-lg);background:var(--surface)}
+  .spring-art{position:relative;min-height:300px}
+  .spring-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .spring-art .cred{position:absolute;right:8px;bottom:7px;z-index:2;font-family:var(--mono);
+    font-size:10px;color:rgba(255,255,255,.72);background:rgba(8,10,16,.4);padding:2px 7px;border-radius:6px}
+  .spring-body{padding:30px 30px 32px;display:flex;flex-direction:column;gap:14px;justify-content:center}
+  .spring-body h2{font-size:clamp(24px,3.4vw,34px);letter-spacing:-.02em}
+  .spring-body p{color:var(--ink-2);font-size:15.5px}
+  .spring-facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+  .sfact{font-family:var(--mono);font-size:12px;color:var(--ink);background:var(--surface-2);
+    border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+  @media(max-width:760px){.spring{grid-template-columns:1fr}.spring-art{min-height:230px}}
+
+  /* cost table */
+  .costcard{background:var(--surface);border:1px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow);overflow:hidden}
+  .costhead,.crow{display:grid;grid-template-columns:1fr 96px 108px;align-items:center;
+    gap:14px;padding-inline:22px}
+  .costhead{height:46px;background:var(--surface-2);border-bottom:1px solid var(--line)}
+  .ch-item,.ch-num{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+    text-transform:uppercase;color:var(--ink-3)}
+  .ch-num{text-align:right}
+  .ch-num.pp{color:var(--teal-deep)}
+  .crow{padding-block:15px;border-bottom:1px solid var(--line-2)}
+  .crow:hover{background:var(--surface-2)}
+  .ci{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .ci-name{font-size:15px;font-weight:500;line-height:1.25}
+  .ci-sub{font-size:12.5px;color:var(--ink-3);line-height:1.3}
+  .cn{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;
+    font-size:14px;color:var(--ink-3)}
+  .cn.pp{font-size:16px;font-weight:600;color:var(--ink)}
+  .crow.total{background:var(--surface-3);border-bottom:0;padding-block:18px}
+  .crow.total .ci-name{font-family:var(--disp);font-weight:700;font-size:18px}
+  .crow.total .cn{font-size:15px;color:var(--ink-2)}
+  .crow.total .cn.pp{font-family:var(--disp);font-weight:800;font-size:22px;color:var(--teal-deep)}
+  .costnote{padding:15px 22px;font-size:13px;color:var(--ink-2);background:var(--surface-2);
+    border-top:1px solid var(--line-2)}
+  :root[data-theme="dark"] .ch-num.pp,:root[data-theme="dark"] .crow.total .cn.pp{color:var(--teal)}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .ch-num.pp,
+    :root:not([data-theme="light"]) .crow.total .cn.pp{color:var(--teal)}}
+  @media(max-width:520px){
+    .costhead,.crow{grid-template-columns:1fr 62px 74px;gap:8px;padding-inline:15px}
+    .cn{font-size:13px}.cn.pp{font-size:14.5px}.ci-name{font-size:14px}.ci-sub{font-size:11.5px}
+    .crow.total .cn.pp{font-size:18px}.costnote{padding-inline:15px}
+  }
+
+  .bignum{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:22px}
+  .bignum .amt{font-family:var(--disp);font-weight:800;font-size:clamp(42px,9vw,64px);
+    letter-spacing:-.03em;line-height:.9;color:var(--teal-deep)}
+  :root[data-theme="dark"] .bignum .amt{color:var(--teal)}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .bignum .amt{color:var(--teal)}}
+  .bignum .lab{font-size:14px;color:var(--ink-2);max-width:26ch}
+
+  /* columns (packing) */
+  .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;align-items:start}
+  .col{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;
+    box-shadow:var(--shadow)}
+  .col h3{font-size:17px;display:flex;align-items:center;gap:9px;margin-bottom:4px}
+  .col h3 .dot{width:9px;height:9px;border-radius:3px;background:var(--teal);flex:none}
+  .col h3 .dot.sun{background:var(--sun)} .col h3 .dot.alp{background:var(--alpen)}
+  .col .cap{font-size:12.5px;color:var(--ink-3);margin-bottom:12px;font-family:var(--mono)}
+  ul.check{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:7px}
+  ul.check li{position:relative;padding-left:24px;font-size:14px;color:var(--ink)}
+  ul.check li::before{content:"";position:absolute;left:0;top:7px;width:13px;height:13px;
+    border:1.5px solid var(--teal);border-radius:4px}
+  ul.check li b{font-weight:600}
+  ul.check li span{color:var(--ink-3);font-family:var(--mono);font-size:11.5px}
+
+  /* logistics / warnings */
+  .logs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .log{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;
+    box-shadow:var(--shadow)}
+  .log h4{font-size:15.5px;margin-bottom:7px;display:flex;gap:8px;align-items:center}
+  .log h4 svg{width:17px;height:17px;color:var(--teal-deep);flex:none}
+  :root[data-theme="dark"] .log h4 svg{color:var(--teal)}
+  .log p{font-size:13.5px;color:var(--ink-2)}
+  .log p+p{margin-top:7px}
+  .callout{display:flex;gap:13px;background:var(--warn-bg);border:1px solid var(--warn-line);
+    border-radius:14px;padding:16px 18px;margin-bottom:16px}
+  .callout svg{width:22px;height:22px;color:var(--warn);flex:none;margin-top:1px}
+  .callout h4{font-size:15px;margin-bottom:3px;color:var(--ink)}
+  .callout p{font-size:13.5px;color:var(--ink-2)}
+  .callout p b{color:var(--ink)}
+
+  /* route */
+  .route{display:flex;flex-direction:column;gap:0;background:var(--surface);border:1px solid var(--line);
+    border-radius:16px;padding:8px 20px;box-shadow:var(--shadow)}
+  .stop{display:grid;grid-template-columns:22px 1fr auto;gap:14px;align-items:center;padding:12px 0;
+    position:relative}
+  .stop:not(:last-child)::after{content:"";position:absolute;left:10px;top:30px;bottom:-6px;
+    width:2px;background:var(--line)}
+  .stop .pin{width:22px;height:22px;border-radius:50%;border:2px solid var(--teal);
+    background:var(--surface);display:grid;place-items:center;z-index:1}
+  .stop .pin i{width:7px;height:7px;border-radius:50%;background:var(--teal);display:block}
+  .stop .nm{font-size:14.5px;font-weight:500}
+  .stop .nm small{display:block;color:var(--ink-3);font-size:12px;font-weight:400}
+  .stop .mi{font-family:var(--mono);font-size:12.5px;color:var(--ink-2);text-align:right;white-space:nowrap}
+
+  /* credits */
+  .credits{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+    box-shadow:var(--shadow)}
+  .credits h3{font-size:14px;margin-bottom:10px;font-family:var(--mono);font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+  .credits ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+  .credits li{font-size:12.5px;color:var(--ink-2);font-family:var(--mono);line-height:1.45}
+  .credits b{color:var(--ink);font-weight:600}
+
+  /* cta */
+  .cta{background:var(--surface);border:1px solid var(--line);border-radius:20px;
+    padding:clamp(28px,5vw,48px);text-align:center;box-shadow:var(--shadow-lg);
+    display:flex;flex-direction:column;align-items:center;gap:14px}
+  .cta h2{font-size:clamp(26px,5vw,40px);letter-spacing:-.02em}
+  .cta p{color:var(--ink-2);max-width:44ch;font-size:16px}
+  .cta .line{font-family:var(--mono);font-size:13px;color:var(--ink-3);margin-top:4px}
+
+  footer{padding:40px 20px 60px;text-align:center;color:var(--ink-3);font-size:12.5px;
+    font-family:var(--mono)}
+  footer a{color:var(--ink-2)}
+
+  @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap row">
+    <button class="brand" data-scroll="#top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18L13.5 6 10 12l-2.5-3z"/><path d="M3 20l4-6"/></svg>
+      Fall Break '26
+    </button>
+    <nav class="navlinks">
+      <a href="#why">Why</a>
+      <a href="#gallery">Photos</a>
+      <a href="#plan">Itinerary</a>
+      <a href="#spring">Hot Spring</a>
+      <a href="#cost">Cost</a>
+      <a href="#pack">Packing</a>
+      <a href="#logi">Logistics</a>
+    </nav>
+    <button class="ttoggle" id="themeBtn" aria-label="Toggle light/dark">
+      <svg id="icoMoon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="hero-photo" role="img" aria-label="Alabama Hills boulder field beneath a snow-dusted Mt. Whitney"></div>
+  <div class="hero-inner">
+    <div class="eyebrow kicker">Fall Break · US-395 North · Oct 2026</div>
+    <h1>Granite, stars<br>&amp; a <em>sunset soak</em></h1>
+    <p class="lede">Three nights camped under Mt. Whitney in the Alabama Hills — ending in a hot spring as the sky goes purple.</p>
+    <div class="crew"><span>THE CREW ·</span> <b>Viktor</b> · <b>Andrew</b> · <b>Omar</b> · <b>Brendan</b> · <b>Rishi / Nathan</b> &nbsp;<span>(5 total — 5th spot TBD · 3 SCO members)</span></div>
+    <div class="hechips">
+      <div class="hechip"><div class="k">Dates</div><div class="v">Oct 7–10 <small>Wed–Sat</small></div></div>
+      <div class="hechip"><div class="k">Nights</div><div class="v">3 <small>camping</small></div></div>
+      <div class="hechip"><div class="k">Basecamp</div><div class="v">Lone Pine <small>Alabama Hills</small></div></div>
+      <div class="hechip"><div class="k">Per person</div><div class="v">≈ $190 <small>all-in</small></div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- WHY -->
+  <section id="why"><div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The pitch</div>
+      <h2>Why this trip</h2>
+      <p>The Eastern Sierra packs the most scenery-per-mile in California — and early October is the sweet spot: golden aspens, empty trails, cold clear nights, and hot springs that still have road access.</p>
+    </div>
+    <div class="pitch">
+      <div class="pcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18L14 5l-4 8-2-3z"/></svg></div>
+        <h3>Wake up under Whitney</h3><p>Alpenglow lights the tallest peak in the Lower 48 straight from your tent door at Tuttle Creek.</p></div>
+      <div class="pcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 13c2 2 6 2 8 0"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg></div>
+        <h3>Movie-set boulders</h3><p>Scramble the Alabama Hills — arches, orange granite, and film locations from 400+ Westerns.</p></div>
+      <div class="pcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16c2-4 14-4 16 0"/><path d="M7 12V8m5 4V6m5 6V8"/></svg></div>
+        <h3>Soak at Wild Willy's</h3><p>End the big day chest-deep in a 100°F geothermal pool, watching the sun drop behind the range.</p></div>
+      <div class="pcard"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2m0 14v2m9-9h-2M5 12H3m14.5-6.5-1.4 1.4M7 17l-1.5 1.5m0-13L7 7m10 10 1.5 1.5"/><circle cx="12" cy="12" r="4"/></svg></div>
+        <h3>Zero light pollution</h3><p>Alabama Hills is an International Dark-Sky area. Campfire, s'mores, and the whole Milky Way overhead.</p></div>
+    </div>
+  </div></section>
+
+  <div class="divide"></div>
+
+  <!-- GALLERY -->
+  <section id="gallery"><div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The scenery</div>
+      <h2>What you're signing up for</h2>
+      <p>Real shots from the exact spots on this itinerary. No filter needed out here.</p>
+    </div>
+    <div class="gallery">
+      <figure class="shot wide"><img src="images/alabama-pano.jpg" alt="Panorama of the Alabama Hills with Mount Whitney behind" loading="lazy">
+        <figcaption>Alabama Hills, under the Whitney crest<small>Basecamp views · photo: Daniel Mayer, CC BY-SA 3.0</small></figcaption></figure>
+      <figure class="shot"><img src="images/mobius.jpg" alt="Mobius Arch, a granite arch in the Alabama Hills" loading="lazy">
+        <figcaption>Mobius Arch<small>Thursday morning · photo: Justin Meissen, CC BY-SA 2.0</small></figcaption></figure>
+      <figure class="shot"><img src="images/bigpine.jpg" alt="Turquoise glacial lake in the Big Pine Creek basin" loading="lazy">
+        <figcaption>Big Pine Lakes<small>Friday option A · photo: James Jernigan, CC BY-SA 4.0</small></figcaption></figure>
+      <figure class="shot"><img src="images/whitney-portal.jpg" alt="Whitney Portal Road climbing toward Mount Whitney" loading="lazy">
+        <figcaption>Whitney Portal Road<small>Thursday drive-up · photo: Matt McK, CC0</small></figcaption></figure>
+    </div>
+  </div></section>
+
+  <div class="divide"></div>
+
+  <!-- QUICK FACTS -->
+  <section><div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">At a glance</div>
+      <h2>The essentials</h2>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="k">Ride</div><div class="v">Honda Odyssey</div><div class="s">Zipcar · gas included</div></div>
+      <div class="fact"><div class="k">Leave USC</div><div class="v">Wed 6:30 PM</div><div class="s">Oct 7, car pickup</div></div>
+      <div class="fact"><div class="k">Back at USC</div><div class="v">Sat 6:30 PM</div><div class="s">Oct 10, car due</div></div>
+      <div class="fact"><div class="k">Drive one-way</div><div class="v">~210 mi</div><div class="s">3.5–4 hrs</div></div>
+      <div class="fact"><div class="k">Basecamp</div><div class="v">Tuttle Creek</div><div class="s">$12/night · fire rings</div></div>
+      <div class="fact"><div class="k">Camp elevation</div><div class="v">~5,100 ft</div><div class="s">nights near freezing</div></div>
+      <div class="fact"><div class="k">Group gear</div><div class="v">SC Outfitters</div><div class="s">$3/item · $54 total</div></div>
+      <div class="fact"><div class="k">The soak</div><div class="v">Wild Willy's</div><div class="s">free · ~100°F</div></div>
+    </div>
+  </div></section>
+
+  <div class="divide"></div>
+
+  <!-- ITINERARY -->
+  <section id="plan"><div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Day by day</div>
+      <h2>The plan</h2>
+      <p>One basecamp the whole trip (less setup, more time outside). Thursday warms up the legs; Friday is the big north run that ends in the hot spring.</p>
+    </div>
+    <div class="days">
+
+      <div class="day">
+        <div class="day-top"><span class="day-badge">Day 1 · Wed</span><h3>The escape</h3><span class="date">Oct 7</span><span class="tag">drive · ~210 mi</span></div>
+        <div class="rows">
+          <div class="trow"><div class="t">Afternoon</div><div class="d"><b>Pick up gear from SC Outfitters.</b> <span>Confirm a Wednesday pickup first — the default cycle starts Thursday (see logistics).</span></div></div>
+          <div class="trow"><div class="t">6:30 PM</div><div class="d"><b>Pick up the Zipcar Odyssey</b>, load people + gear near campus.</div></div>
+          <div class="trow"><div class="t">7:00 PM</div><div class="d"><b>Big grocery + supply run</b> <span>(Ralphs). Food, ice, ~7 gal water, firewood, stove fuel — Lone Pine stores may be closed by arrival.</span></div></div>
+          <div class="trow"><div class="t">7:30 PM</div><div class="d"><b>Roll north</b> on I-5 / CA-14 / US-395. <span>Gas is on the Zipcar card. Dinner stop en route.</span></div></div>
+          <div class="trow"><div class="t">~11:15 PM</div><div class="d"><b>Arrive Tuttle Creek Campground</b>, grab a first-come site, pitch in the dark, quick fire, sleep.</div></div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-top"><span class="day-badge">Day 2 · Thu</span><h3>Basecamp &amp; boulders</h3><span class="date">Oct 8</span><span class="tag">easy · acclimatize</span></div>
+        <div class="rows">
+          <div class="trow"><div class="t">Sunrise</div><div class="d"><b>Alpenglow on Mt. Whitney</b> — coffee from camp, the range turns orange.</div></div>
+          <div class="trow"><div class="t">Morning</div><div class="d"><b>Alabama Hills</b>: Mobius Arch Loop <span>(0.6 mi — the arch frames Whitney)</span>, Movie Road drive, boulder scrambling + photos.</div></div>
+          <div class="trow"><div class="t">Midday</div><div class="d"><b>Drive up Whitney Portal</b> to 8,300 ft. Lunch by the creek, walk to the waterfall. <span>Optional leg-stretcher: Lone Pine Lake (~6 mi RT) to prep lungs.</span></div></div>
+          <div class="trow"><div class="t">Afternoon</div><div class="d"><b>Lone Pine town</b>: top up ice/water/firewood, Museum of Western Film History if you want AC.</div></div>
+          <div class="trow"><div class="t">Night</div><div class="d"><b>Campfire, camp bowls, s'mores</b> — then let the fire die down and stargaze.</div></div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-top"><span class="day-badge">Day 3 · Fri</span><h3>North run + the soak</h3><span class="date">Oct 9</span><span class="tag">big day · ~130 mi RT</span></div>
+        <div class="rows">
+          <div class="trow"><div class="t">Morning</div><div class="d"><b>Pack day bags, drive north on 395.</b> Pick your intensity ↓</div></div>
+          <div class="trow"><div class="t">Option A</div><div class="d"><b>Big Pine Lakes</b> <span>— turquoise glacial lakes under Temple Crag. ~10–11 mi RT, 2,200 ft gain, strenuous. Turn back at First Lake for a shorter day.</span></div></div>
+          <div class="trow"><div class="t">Option B</div><div class="d"><b>Bishop cruise</b> <span>— Erick Schat's Bakery, the Buttermilks boulders + Sierra views. Save the legs for the water.</span></div></div>
+          <div class="trow"><div class="t">Golden hr</div><div class="d"><b>Wild Willy's Hot Springs</b> <span>(Benton Crossing Rd). Short boardwalk to the pools.</span></div></div>
+          <div class="trow"><div class="t">Sunset→</div><div class="d"><b>Soak &amp; stargaze</b> as the sun drops behind the crest, then drive back to camp (~1.5 hr) for the last fire.</div></div>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="day-top"><span class="day-badge">Day 4 · Sat</span><h3>Pack out &amp; home</h3><span class="date">Oct 10</span><span class="tag">drive · car due 6:30 PM</span></div>
+        <div class="rows">
+          <div class="trow"><div class="t">Morning</div><div class="d"><b>Eggs + bacon</b>, break camp, drown &amp; stir the fire, <b>pack out all trash</b>.</div></div>
+          <div class="trow"><div class="t">~10:30 AM</div><div class="d"><b>Roll south</b> — leave a real buffer; Saturday traffic into LA on the 14/5 gets ugly.</div></div>
+          <div class="trow"><div class="t">Before 6:30</div><div class="d"><b>Refuel with the Zipcar gas card, return the Odyssey.</b> <span>Late returns get billed steeply.</span></div></div>
+          <div class="trow"><div class="t">Mon Oct 12</div><div class="d"><b>Return gear to SC Outfitters</b> <span>(Monday-evening drop-off window — you keep it over the weekend).</span></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div></section>
+
+  <div class="divide"></div>
+
+  <!-- HOT SPRING -->
+  <section id="spring"><div class="wrap">
+    <div class="spring">
+      <div class="spring-art">
+        <img src="images/wildwillys.jpg" alt="Boardwalk leading across the Long Valley flats to Wild Willy's Hot Springs at sunset">
+        <span class="cred">Wild Willy's · photo: msittig, CC0</span>
+      </div>
+      <div class="spring-body">
+        <div class="eyebrow">Friday's finale</div>
+        <h2>Wild Willy's Hot Springs</h2>
+        <p>The capstone to the big north day — not the whole trip, just the perfect way to end one. Rock-lined geothermal pools on the Long Valley flats near Mammoth: a short boardwalk in, the big pool around 100°F, an uninterrupted view of the Sierra crest. Free, first-come, best right at sunset.</p>
+        <div class="spring-facts">
+          <span class="sfact">~100°F</span>
+          <span class="sfact">Free</span>
+          <span class="sfact">~1.5 hr from camp</span>
+          <span class="sfact">Bring: swimsuit + sandals + headlamp</span>
+        </div>
+        <p style="font-size:13px;color:var(--ink-3)">Heads up: it's on BLM land with an occasionally rough dirt road (check conditions the day-of), and it's a pack-it-in / pack-it-out site — leave it cleaner than you found it.</p>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="divide"></div>
+
+  <!-- COST -->
+  <section id="cost"><div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The damage</div>
+      <h2>What it costs</h2>
+    </div>
+    <div class="bignum">
+      <div class="amt tnum">$190</div>
+      <div class="lab">per person, split 5 ways — and the refundable Zipcar is more than half of it. Gas is included in the car.</div>
+    </div>
+    <div class="costcard">
+      <div class="costhead">
+        <div class="ch-item">Item</div><div class="ch-num">Group</div><div class="ch-num pp">Per person</div>
+      </div>
+      <div class="crow"><div class="ci"><span class="ci-name">Zipcar Odyssey</span><span class="ci-sub">3 days · gas + insurance included</span></div><div class="cn">$510</div><div class="cn pp">$102</div></div>
+      <div class="crow"><div class="ci"><span class="ci-name">Mileage overage</span><span class="ci-sub">est. — 540 mi included, then $0.67/mi</span></div><div class="cn">~$60</div><div class="cn pp">~$12</div></div>
+      <div class="crow"><div class="ci"><span class="ci-name">SC Outfitters gear</span><span class="ci-sub">$3 × 18 items · first aid + trowel free</span></div><div class="cn">$54</div><div class="cn pp">$11</div></div>
+      <div class="crow"><div class="ci"><span class="ci-name">Tuttle Creek camp</span><span class="ci-sub">$12 × 3 nights · card only</span></div><div class="cn">$36</div><div class="cn pp">$7</div></div>
+      <div class="crow"><div class="ci"><span class="ci-name">Food &amp; drinks</span><span class="ci-sub">bulk camp cooking, 4 days</span></div><div class="cn">$200</div><div class="cn pp">$40</div></div>
+      <div class="crow"><div class="ci"><span class="ci-name">Firewood</span><span class="ci-sub">collecting is banned — buy it</span></div><div class="cn">~$40</div><div class="cn pp">$8</div></div>
+      <div class="crow"><div class="ci"><span class="ci-name">Water + stove fuel</span><span class="ci-sub">~7 gal · 2 isobutane canisters</span></div><div class="cn">~$30</div><div class="cn pp">$6</div></div>
+      <div class="crow"><div class="ci"><span class="ci-name">WAG bags + misc</span><span class="ci-sub">pack-out kit, coffee, buffer</span></div><div class="cn">~$20</div><div class="cn pp">$4</div></div>
+      <div class="crow"><div class="ci"><span class="ci-name">Permits</span><span class="ci-sub">camping + campfire — both free</span></div><div class="cn">$0</div><div class="cn pp">$0</div></div>
+      <div class="crow total"><div class="ci"><span class="ci-name">Total</span><span class="ci-sub">group of 5, all-in</span></div><div class="cn">~$950</div><div class="cn pp">~$190</div></div>
+      <div class="costnote">Estimate for a group of 5. Biggest variable is Zipcar mileage — trim it by keeping Friday's north loop tight (skip Big Pine if the tank of energy isn't there). The car is fully refundable if the trip changes.</div>
+    </div>
+  </div></section>
+
+  <div class="divide"></div>
+
+  <!-- PACKING -->
+  <section id="pack"><div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Load-out</div>
+      <h2>Packing list</h2>
+      <p>The big shared gear comes from SC Outfitters. You bring your own clothes and personal kit — pack for near-freezing nights even though days are mild.</p>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <h3><span class="dot"></span>On you (personal)</h3>
+        <div class="cap">everyone brings their own</div>
+        <ul class="check">
+          <li><b>Warm layers</b> — puffy, fleece, thermal base layer</li>
+          <li><b>Beanie + gloves</b> <span>nights ~30°F</span></li>
+          <li><b>Hiking shoes</b> + wool socks</li>
+          <li><b>Rain shell</b> <span>just in case</span></li>
+          <li><b>Swimsuit + quick-dry towel + sandals</b></li>
+          <li><b>Headlamp</b> + spare batteries</li>
+          <li><b>Water bottle</b> (2L) + daypack</li>
+          <li>Sunglasses, hat, <b>high-SPF sunscreen</b></li>
+          <li>Toiletries, meds, lip balm, power bank</li>
+          <li>Card + a little cash</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3><span class="dot sun"></span>Group kit — SC Outfitters</h3>
+        <div class="cap">$3/item · reserved via Keira</div>
+        <ul class="check">
+          <li>1× <b>6-person tent</b> <span>$3</span></li>
+          <li>5× <b>low-temp sleeping bags</b> <span>5–25°F</span></li>
+          <li>5× <b>foam sleeping pads</b></li>
+          <li>5× <b>foldable camp chairs</b></li>
+          <li>1× <b>backpacking stove</b> + pots <span>no fuel</span></li>
+          <li>1× <b>50L pack</b></li>
+          <li>1× <b>first aid kit</b> <span>free</span></li>
+          <li>1× <b>trowel</b> <span>free</span></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3><span class="dot alp"></span>Buy before / en route</h3>
+        <div class="cap">grab on the Wednesday run</div>
+        <ul class="check">
+          <li><b>Stove fuel</b> — 2× isobutane canisters</li>
+          <li><b>Firewood</b> — 4–6 bundles</li>
+          <li><b>Drinking water</b> — ~7 gallons</li>
+          <li><b>Cooler + ice</b> <span>(borrow a cooler)</span></li>
+          <li>Cook kit: pan, spatula, knife, cutting board</li>
+          <li>Lighter/matches, foil, biodegradable soap, sponge</li>
+          <li>Trash bags + <b>WAG bags</b> for trails</li>
+          <li>Lantern / string lights, paper towels</li>
+          <li>Coffee + a way to make it ☕</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3><span class="dot"></span>Food &amp; menu</h3>
+        <div class="cap">~$40/person · bulk &amp; cheap</div>
+        <ul class="check">
+          <li><b>Camp bowls</b> — chicken, rice, beans, salsa, cheese</li>
+          <li><b>Skillet dinner</b> — chicken + shallots</li>
+          <li><b>Lunches</b> — tortilla pizzas, PB + bread, trail snacks</li>
+          <li><b>Breakfast</b> — eggs, bacon, oatmeal</li>
+          <li><b>S'mores</b> kit for the fire</li>
+          <li>Electrolytes / drink mix <span>altitude</span></li>
+        </ul>
+      </div>
+    </div>
+  </div></section>
+
+  <div class="divide"></div>
+
+  <!-- LOGISTICS -->
+  <section id="logi"><div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Don't-skip</div>
+      <h2>Logistics &amp; permits</h2>
+      <p>A few of these are easy to get wrong and would actually sink the trip. Knock the two ⚠️ items out this week.</p>
+    </div>
+
+    <div class="callout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+      <div>
+        <h4>⚠️ Confirm a Wednesday gear pickup</h4>
+        <p>SC Outfitters' standard weekend cycle is <b>Thursday night → Monday night</b>, but we leave <b>Wednesday</b>. Reply to Keira and lock in a <b>Wed Oct 7 (before 6:30 PM)</b> pickup, or we drive up with no tent. Book at least a week ahead; gear returns Mon Oct 12. All rentals are final/no-refund.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>
+      <div>
+        <h4>⚠️ Check fire restrictions before leaving</h4>
+        <p>Fall fire danger can trigger bans. Confirm current <b>Inyo NF / BLM Bishop</b> fire rules the week before — if fires are restricted, even Tuttle Creek's rings may be closed and we'd cook on the stove only.</p>
+      </div>
+    </div>
+
+    <div class="logs">
+      <div class="log"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M9 9h6M9 13h6M9 17h4"/></svg>Two free permits</h4>
+        <p><b>Alabama Hills camping permit</b> — free on Recreation.gov, required for overnight even though we're at Tuttle Creek (grab it as backup for a dispersed night).</p>
+        <p><b>California Campfire Permit</b> — free 2-minute online quiz; covers wood fires <em>and</em> the camp stove.</p></div>
+
+      <div class="log"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 20a5 5 0 0 1-2-9.6A5.5 5.5 0 0 1 16 8a4 4 0 0 1 1 7.9"/><path d="M12 12v8m0-8-2 2m2-2 2 2"/></svg>Water &amp; firewood</h4>
+        <p>No reliable potable water at camp in fall — <b>bring ~7 gallons</b>. Collecting firewood is <b>banned</b>, so buy bundles. Both go on the Wednesday supply run since Lone Pine stores may be shut when we arrive.</p></div>
+
+      <div class="log"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6 17l1.5-5h9L18 17M8 12l1-4h6l1 4"/><circle cx="8" cy="19" r="1.5"/><circle cx="16" cy="19" r="1.5"/></svg>The Zipcar math</h4>
+        <p>Gas &amp; insurance are included (gas card in the car). But only <b>~540 mi</b> is included over 3 days; extra miles are <b>$0.67/mi</b>. Our route is ~600–650 mi, so budget a small overage. Return by <b>6:30 PM Sat</b> — aim to leave Lone Pine by 11 AM.</p></div>
+
+      <div class="log"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20V10l6-5 6 5v10"/><path d="M10 20v-5h4v5"/></svg>Altitude &amp; weather</h4>
+        <p>Camp 5,100 ft; hikes 8,000–10,000+ ft. Hydrate, take Thursday easy, watch for headaches. Early Oct: <b>60–70°F days, 30–40°F nights</b> (below freezing up high). Check the forecast — first snow is possible.</p></div>
+
+      <div class="log"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>Signal &amp; safety</h4>
+        <p>Cell service is spotty in the canyons — <b>download offline maps</b> (Google Maps + AllTrails) and text someone the plan. Store all food in the car at night (bear country). Pack out everything.</p></div>
+
+      <div class="log"><h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>First-come camping</h4>
+        <p>Tuttle Creek has 83 sites and doesn't take reservations — arriving late Wednesday is fine mid-week in October, but have a Plan B site (Lone Pine Campground) if it's somehow full.</p></div>
+    </div>
+  </div></section>
+
+  <div class="divide"></div>
+
+  <!-- ROUTE -->
+  <section><div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Getting there</div>
+      <h2>The corridor</h2>
+      <p>Straight shot up US-395. Everything on the trip lives along this line.</p>
+    </div>
+    <div class="route">
+      <div class="stop"><div class="pin"><i></i></div><div class="nm">USC / Los Angeles<small>I-5 → CA-14 → US-395</small></div><div class="mi">0 mi</div></div>
+      <div class="stop"><div class="pin"><i></i></div><div class="nm">Lone Pine + Tuttle Creek<small>basecamp · Alabama Hills</small></div><div class="mi">~210 mi · 3.5–4 hr</div></div>
+      <div class="stop"><div class="pin"><i></i></div><div class="nm">Whitney Portal<small>Thursday — 8,300 ft</small></div><div class="mi">+13 mi</div></div>
+      <div class="stop"><div class="pin"><i></i></div><div class="nm">Big Pine Lakes<small>Friday option A</small></div><div class="mi">+25 mi N</div></div>
+      <div class="stop"><div class="pin"><i></i></div><div class="nm">Wild Willy's Hot Springs<small>Friday sunset</small></div><div class="mi">~62 mi N of camp</div></div>
+    </div>
+  </div></section>
+
+  <div class="divide"></div>
+
+  <!-- CREDITS -->
+  <section><div class="wrap">
+    <div class="credits">
+      <h3>Photo credits</h3>
+      <ul>
+        <li><b>Hero — Alabama Hills under Mt. Whitney</b> · Alanthebox · CC0 · Wikimedia Commons</li>
+        <li><b>Alabama Hills panorama</b> · Daniel Mayer (mav) · CC BY-SA 3.0 · Wikimedia Commons</li>
+        <li><b>Mobius Arch</b> · Justin Meissen · CC BY-SA 2.0 · via Wikimedia Commons</li>
+        <li><b>Big Pine Lakes (Finger Lake)</b> · James Jernigan · CC BY-SA 4.0 · Wikimedia Commons</li>
+        <li><b>Whitney Portal Road</b> · Matt McK · CC0 · Wikimedia Commons</li>
+        <li><b>Wild Willy's Hot Springs</b> · msittig · CC0 · Flickr</li>
+      </ul>
+    </div>
+  </div></section>
+
+  <!-- CTA -->
+  <section><div class="wrap">
+    <div class="cta">
+      <div class="eyebrow">You in?</div>
+      <h2>3 nights. ~$190. Say the word.</h2>
+      <p>Car's booked and refundable, gear's spoken for. All that's left is a yes and a Ralphs list. Lock it in and we leave Wednesday the 7th.</p>
+      <div class="line">Questions → text Viktor or Andrew</div>
+    </div>
+  </div></section>
+</main>
+
+<footer>
+  Fall Break 2026 · Oct 7–10 · Alabama Hills → Wild Willy's<br>
+  Prices are estimates — confirm gear, permits &amp; fire rules before you go.
+</footer>
+
+<script>
+  (function(){
+    var root=document.documentElement, btn=document.getElementById('themeBtn');
+    var sun='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2m0 14v2m9-9h-2M5 12H3m14.5-6.5-1.4 1.4M7 17l-1.5 1.5m0-13L7 7m10 10 1.5 1.5"/></svg>';
+    var moon=document.getElementById('icoMoon').outerHTML;
+    function saved(){try{return localStorage.getItem('sierra-theme')}catch(e){return null}}
+    function current(){ var t=root.getAttribute('data-theme'); if(t)return t;
+      return (window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches)?'dark':'light'; }
+    var s=saved(); if(s){root.setAttribute('data-theme',s);}
+    btn.innerHTML = current()==='dark'?sun:moon;
+    btn.addEventListener('click',function(){
+      var next=current()==='dark'?'light':'dark';
+      root.setAttribute('data-theme',next);
+      try{localStorage.setItem('sierra-theme',next)}catch(e){}
+      btn.innerHTML = next==='dark'?sun:moon;
+    });
+    function go(sel){var el=document.querySelector(sel); if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+    document.querySelectorAll('.navlinks a').forEach(function(a){
+      a.addEventListener('click',function(e){var id=a.getAttribute('href');
+        if(id&&id[0]==='#'){e.preventDefault();go(id);}});
+    });
+    document.querySelectorAll('[data-scroll]').forEach(function(b){
+      b.addEventListener('click',function(){go(b.getAttribute('data-scroll'));});
+    });
+  })();
+</script>
+</body>
+</html>
